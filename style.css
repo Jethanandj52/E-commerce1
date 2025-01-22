@@ -294,6 +294,7 @@ table th{
 }
  tfoot tr td{
     padding: 20px;
+    color: black;
  }
 #userTable img{
     width: 100px;
