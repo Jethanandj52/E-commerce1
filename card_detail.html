@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopSmart </title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .card3, .card4, .card5, .card7, .card6,.card10, .card11,.card12,.card13,.card14,.card15,.card16,.card17,.card18,.card19,.card20{
+    display: block;
+}
+    </style>
+</head>
+<body>
+    <body>
+
+        
+        <section class="title">
+            <div class="logo"><img src="logo.png" alt=""></div>
+           <div> E-COMMERCE </div>
+        </section>
+        <section class="header">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="card_detail.html">Detail</a></li>
+                <li><span class="cart" onclick="cart()">Cart Page</span></li>
+                <!-- <li><a href=""></a></li> -->
+    
+            </ul>
+        </section>
+        <section class="cardOrder">
+            <div id="cart"> 
+        <section class="title">
+            <div onclick="back()" class="back">
+                ⬅
+            </div>
+            E-COMMERCE
+        <div></div> </section>
+         
+        <section id="table">
+            <table>
+                <thead>
+                  
+                        <th>Product_ID</th>
+                        <th>Image</th>
+                        <th>Product Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total Amount</th>
+                        <th>Remove</th>
+                     
+                </thead>
+                <tbody id="userTable"></tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="5">Total Bill</td>
+                        <td id="totalBill">Amount</td>
+                        <td><button onclick="checkout()" id="check">CheckOut</button></td>
+                    </tr>
+                </tfoot>
+                 
+            </table>
+        </section>
+            </div>
+        </section>
+       
+        <section class="card-section">
+            <div id="card"></div>
+           
+             
+          
+            
+        </section>
+    
+        <section id="view">
+            <div id="cancel" onclick="cancel()">×</div>
+            <div id="viewCard"></div>
+        </section>
+    
+       
+        <section id="view1">
+            <div id="cancel" onclick="cancel()">×</div>
+            <div id="viewCard1"></div>
+        </section>
+    
+        <section id="checkOut">
+          <div id="thanks">
+            <!-- <div><video src="timecomplete.mp4" autoplay></video></div> -->
+             <div id="image"><img src="complete task.gif" alt=""></div>
+            </div>
+            <div id="checkoutCard">
+                <h1>Enter Your Address And Select Payment Method</h1>
+                <div id="selectedItem"></div>
+                <form action="">
+                    <input type="text" name="" id="address" placeholder="Enter Your Address" required maxlength="50"><br>
+                    <input type="number" name="" id="number" placeholder="Enter Your Phone Number" required maxlength="11"> <br>
+                    <select name="" id="select" required>
+                        <option value="">Choose Your Payment Method</option>
+                        <option value="">Easy Paisa</option>
+                        <option value="">Jazz Cash</option>
+                        <option value="">Cash</option>
+                    </select><br>
+                    <button onclick="confrim()" >Confirm</button>
+                </form>
+               
+            </div>
+        </section>
+    
+        <section id="bookOrder">
+            <div class="book">
+                <h4>Your Order Booked Please Checkout</h4>
+            <img src="booked.gif" alt="">
+            </div>
+            
+             
+        </section>
+    
+        <script src="app.js"></script>
+</body>
+</html>

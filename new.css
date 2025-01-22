@@ -1,0 +1,471 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-x: hidden;
+}
+
+#splash{
+     background-color:#5600ab;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    text-align: center;
+}
+#splash img{
+    margin-top: 50px;
+    width: 50%;
+}
+.title{
+    display: flex;
+    justify-content: center;
+gap: 20px;
+    background-color: #3e5561;
+font-size: 40px;
+text-align: center;
+    padding: 20px;
+    color: white;
+    /* font-family:Arial, Helvetica, sans-serif; */
+    text-align: center;
+    
+
+}
+.title .back{
+    cursor: pointer;
+}
+.title img{
+    width: 60px;
+
+}
+.header{
+    
+    background-color: #6f8997;
+font-size: 20px;
+     text-align: center;
+     padding: 20px;
+    
+}
+.header ul{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    
+
+}
+.header ul li a{
+    text-decoration: none;
+    color: white;
+}
+.hero{
+     display: flex;
+     justify-content: space-between;
+     background-color: #eaf7fe;
+     
+}
+.hero .first{
+    width: 40%;
+    padding: 50px;
+    padding-top: 150px;
+    line-height: 40px;
+}
+.hero .first .name{
+    font-size: 60px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    color: rgb(51, 32, 145);
+
+}
+b{
+    color: rgb(51, 32, 145);
+
+}
+.offer{
+    color:  rgb(51, 32, 145);
+    font-size: 30px;
+    margin: 40px 0px 20px 0px;
+}
+
+.hero .heroImage img{
+    width: 120%;
+    height: 100vh;
+    /* border-radius: 0px 10px; */
+   
+}
+ .card-section{
+    background-color: rgb(241, 234, 234);
+    text-align: center;
+ }
+ .card-section .view-button{
+    /* background-color: blue; */
+    /* color: white; */
+    padding: 10px;
+    width: 10%;
+    margin: 0px 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid black;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 1px 1px 20px black;
+    
+    
+
+ }
+  
+#card{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    padding: 40px;
+    text-align: center;
+    /* color: white; */
+}
+
+
+.card{
+    background-color:rgb(255, 255, 255);
+    border: 1px solid black;
+     padding: 20px;
+    width: 70%;
+    line-height: 30px;
+    
+    border-radius: 10px;
+    
+}
+.card img{
+    width: 150px;
+    height: 150px;
+}
+
+#card button, #view1 .orderButton,#checkout button,#checkOut button,.offer button{
+    background-color: green;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius:10px ;
+    color: white;
+    border: none;
+    cursor: pointer;
+    
+}
+#card button:active,.view-button:active, #view1 .orderButton:active,#checkout button:active,#checkOut button:active,.offer button:active{
+    transition: all 0.1s linear;
+    transform: scale(0.9);
+}
+.offer button{
+    background-color: #eaf7fe;
+    border: 1px solid black;
+    color: black;
+    box-shadow: 1px 1px 10px black;
+    margin: 0;
+}
+
+#view,#view1{
+    display: none;
+    background-color: rgb(65, 65, 65,0.5);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    /* text-align: center; */
+     
+}
+#view #viewCard,#view1 #viewCard1,#checkoutCard,#thanks{
+    background-color: white;
+    width: 50%;
+    /* height: 90%; */
+    border-radius: 10px;
+    margin: 20px auto;
+    text-align: center;
+    line-height: 30px;
+    padding: 20px 80px;
+    
+}
+.cards15{
+    line-height: 23px;
+}
+.card3, .card4, .card5, .card7, .card6,.card10, .card11,.card12,.card13,.card14,.card15,.card16,.card17,.card18,.card19,.card20{
+    display: none;
+}
+#view #cancel, #view1 #cancel,#checkout #cancel{
+    position: absolute;
+    color:white;
+    font-size: 50px;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    left: 82%;
+     
+}
+#view #cancel:hover, #view1 #cancel:hover,#checkout #cancel:hover{
+    color:red;
+    /* box-shadow: 0px 0px 10px blue; */
+    transform: rotate(360deg);
+
+}
+#view #viewCard img{
+    width: 100%;
+    height: 100%;
+
+}
+#view1 #viewCard1 .orderCard img{
+    width: 150px;
+    height: 150px;
+
+}
+#view1{
+    text-align: center;
+}
+#view1 #viewCard1{
+    width: 20%;
+}
+#view1 #cancel{
+    position: absolute;
+    color:white;
+    font-size: 50px;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    left: 70%;
+     
+}
+#view1 .quantity{
+    font-size: 30px;
+}
+#view1 .quantityButton{
+    background-color: #fff;
+    border: none;
+    color: blue;
+    font-size: 25px;
+    margin: 0px 15px;
+    cursor: pointer;
+}
+#view1 .minButton{
+    color: red;
+}
+
+.cardview{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+.cardview .first {
+    width: 50%;
+    text-align: left;
+}
+
+#cart{
+    display: none;
+    background-color:white;
+    width: 100%;
+    height: 100vh;
+    position:fixed;
+    top: 0;
+    color: whtie;
+    overflow-y: scroll;
+    
+}
+#cart .title{
+    display: flex;
+    justify-content: space-between;
+}
+#cart::-webkit-scrollbar {
+    width: 0px; /* Scrollbar ki width */
+}
+.cart{
+    color: white;
+    cursor: pointer;
+    
+}
+table{
+    margin: 20px;
+    width: 90%;
+    margin: 50px auto;
+    border-collapse: collapse;
+    /* border-radius: 10px; */
+    text-align: center;
+}
+tr,td{
+    border: 1px solid black;
+    /* border-collapse: collapse; */   
+}
+table th{
+    color: white;
+   
+    background-color: #4CAF50;
+    outline: none;
+    /* border-radius: 10px; */
+    border-collapse:collapse;
+    padding: 20px;
+    border: 1px solid black;
+
+}
+ tfoot tr td{
+    padding: 20px;
+ }
+#userTable img{
+    width: 100px;
+    height: 100px;
+}
+#userTable button, tfoot button{
+background-color: red;
+padding: 10px 15px;
+border: none;
+outline: none;
+color: white;
+font-weight: bolder;
+border-radius: 10px;
+cursor: pointer;
+}
+
+#userTable button:active, tfoot button:active{
+    transition: all 1s ease;
+    transform: scale(0.5);
+}
+tfoot button{
+    background-color: blue;
+    display: none;
+}
+
+.cardOrder{
+    scroll-behavior: smooth;
+}
+
+#checkOut{
+    display: none;
+    background-color: rgb(0, 0, 0,0.5);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+}
+#checkoutCard{
+    display: block;
+    text-align: center;
+    height: 40%;
+}
+#checkoutCard input, select{
+width: 100%;
+padding: 10px;
+ margin: 10px;
+ border-radius:10px ;
+ border: 2px solid blue;
+ 
+}
+#thanks{
+    background-color: rgba(227,227,227,255);
+    width: 30%;
+}
+
+#checkOut img{
+    width: 80%;  
+}
+.timeComplete{
+    width: 50%;
+    margin: auto;
+}
+
+#bookOrder{
+    display: none;
+    background-color: white;
+    position: fixed;
+    width: 30%;
+   padding: 10px;
+    top: 0;
+    border-radius: 10px;
+    text-align: center;
+     left: 35%;
+}
+#bookOrder img{
+    width: 100px;
+    
+}
+#bookOrder h4{
+    margin-top: 30px;
+}
+.book{
+    display: flex;
+    justify-content: center;
+}
+
+.footer{
+    background-color: #3e5561;
+     text-align: center;
+     padding: 50px;
+     color: white;
+
+}
+.footer img{
+    width: 15%;
+}
+.footerTitle{
+    font-size: 20px;
+    font-weight: bolder;
+    margin: 20px;
+}
+.footer .social{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 40px;
+    margin-bottom: 50px;     
+}
+
+.footer a{
+    color: white;
+    font-size: 30px;
+     
+}
+ 
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    #splash{
+        overflow-y: hidden;
+    }
+    #splash img{
+        margin-top: 100px;
+        width: 100%;
+    }
+ 
+}
+
+
+@media screen and (max-width: 700px)  {
+ * {
+     box-sizing: border-box;
+ }
+ 
+ table{
+    margin: 20px;
+    width: 90%;
+    margin: 50px auto;
+    border-collapse: collapse;
+    /* border-radius: 10px; */
+    text-align: center;
+}
+tr,td{
+    border: 1px solid black;
+    /* border-collapse: collapse; */   
+}
+table th{
+    color: white;
+   
+    background-color: #4CAF50;
+    outline: none;
+    /* border-radius: 10px; */
+    border-collapse:collapse;
+    padding: 20px;
+    border: 1px solid black;
+
+}
+ tfoot tr td{
+    padding: 20px;
+ }
+#userTable img{
+    width: 100px;
+    height: 100px;
+}
+}

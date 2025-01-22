@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopSmart</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="images/fast-food.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Title Section -->
+    <section class="title">
+        <div class="logo"><img src="logo.png" alt=""></div>
+        <div class="webName">E-COMMERCE</div>
+    </section>
+
+    <!-- Header Section -->
+    <section class="header">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="card_detail.html">Detail</a></li>
+            <li><span class="cart" onclick="cart()">Cart Page</span></li>
+        </ul>
+    </section>
+
+    <!-- Cart Section -->
+    <section class="cardOrder">
+        <div id="cart">
+            <section class="title">
+                <div onclick="back()" class="back">⬅</div>
+                <div>E-COMMERCE</div>
+            </section>
+
+            <!-- Cart Table -->
+            <section id="table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product_ID</th>
+                            <th>Image</th>
+                            <th>Product Name</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total Amount</th>
+                            <th>Remove</th>
+                        </tr>
+                    </thead>
+                    <tbody id="userTable"></tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="5">Total Bill</td>
+                            <td id="totalBill">Amount</td>
+                            <td><button onclick="checkout()" id="check">CheckOut</button></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </section>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="first">
+            <div class="name">E-COMMERCE</div>
+            <h1 class="offer">We Offer <span class="dynamic-text"></span><span class="cursor"></span></h1>
+            <div class="discription">
+                E-commerce is a name that reflects the idea of smart, convenient, and budget-friendly shopping. It focuses on providing quality products at affordable prices, giving customers an experience where they can make smart purchasing decisions and get the best value for their money.
+            </div>
+            <div class="offer">
+                <button>Learn More</button>
+            </div>
+        </div>
+        <div class="heroImage"><img src="heroImage.gif" alt=""></div>
+    </section>
+
+    <!-- Card Section -->
+    <section class="card-section">
+        <div id="card"></div>
+        <div class="viewbtn">
+            <a href="card_detail.html">
+                <button type="button" class="view-button" onclick="viewMore()">View More</button>
+            </a>
+        </div>
+    </section>
+
+    <!-- View Modal Sections -->
+    <section id="view">
+        <div id="cancel" onclick="cancel()">×</div>
+        <div id="viewCard"></div>
+    </section>
+
+    <section id="view1">
+        <div id="cancel" onclick="cancel()">×</div>
+        <div id="viewCard1"></div>
+    </section>
+
+    <!-- Checkout Section -->
+    <section id="checkOut">
+        <div id="thanks">
+            <div id="image"><img src="complete task.gif" alt="Task Complete"></div>
+        </div>
+    
+        <div id="checkoutCard">
+            <h1>Enter Your Address And Select Payment Method</h1>
+            <div id="selectedItem"></div>
+            
+            <form action="" id="fillOut">
+                <input type="text" name="address" id="address" placeholder="Enter Your Address" required maxlength="50"><br>
+                <input type="number" name="number" id="number" placeholder="Enter Your Phone Number" required maxlength="11"><br>
+                <select name="paymentMethod" id="select" required>
+                    <option value="">Choose Your Payment Method</option>
+                    <option value="easypaisa">Easy Paisa</option>
+                    <option value="jazzcash">Jazz Cash</option>
+                    <option value="cash">Cash</option>
+                </select><br>
+                <button type="button" onclick="confrim()">Confirm</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Book Order Section -->
+    <section id="bookOrder">
+        <div class="book">
+            <h4>Your Order Is Booked Please Checkout</h4>
+            <img src="booked.gif" alt="">
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <section class="footer">
+        <img src="logo.png" alt="">
+        <div class="footerTitle">E-COMMERCE</div>
+        <div class="social">
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.whatsapp.com/" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        <p class="caption">© E-COMMERCE. All rights reserved.</p>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
