@@ -1,20 +1,30 @@
+ 
+
 const apiUrl = "https://fakestoreapi.com/products";
 const error = "API Can't fetch";
+
+ 
+
 let quantity=1;
 function addQuantity(){
     quantity=quantity+1
     document.getElementById("quantity").innerHTML=quantity
+     
 }
 function minQuantity(){
     if(quantity>1){
-        quantity=quantity+1
+        quantity=quantity-1
     document.getElementById("quantity").innerHTML=quantity
      
-    }  
+    }
+   
+    
 }
  
 async function store() {
-     try {
+    
+    
+    try {
         let api = await fetch(apiUrl);
         let data = await api.json();
 
@@ -24,6 +34,8 @@ async function store() {
             let div = document.createElement("div");
             div.className = `card card${item.id}`;
              div.id=item.id
+           
+            
             div.innerHTML = `
                 <div>  
                     <img src="${item.image}" alt="${item.title}" >
@@ -42,10 +54,11 @@ async function store() {
                     
                 </div>
             `
-            container.appendChild(div);  
+            container.appendChild(div); 
+           
         });
     } catch (error) {
-        console.log(error);  
+        console.log(error); 
     }
 }
 
@@ -93,6 +106,7 @@ async function order(bookOrder) {
     let api = await fetch(apiUrl + "/" + id);
     let data = await api.json();
     let totalPrice = data.price * quantity; 
+
     cartItems.push({
         id: data.id,
         totalPrice: totalPrice,
@@ -122,6 +136,8 @@ async function order(bookOrder) {
     checkbutton();
 }
 
+ 
+
 function deleteOrder(deleteId, itemId) {
     cartItems = cartItems.filter(item => item.id !== itemId);
 
@@ -146,6 +162,10 @@ function checkbutton() {
         checkoutButton.style.display = "block";
     }
 }
+
+       
+ 
+ 
 
  function back(){
         let cart= document.getElementById("cart")
@@ -233,8 +253,8 @@ function ok(){
 }
 
 
-const words = ["Men's Clothes", "Woman's Clothes", "Jewelry", "Electornic"]; // Words to display
-    const textChanger = document.querySelector(".dynamic-text");
+const words = ["Men's Clothes", "Woman's Clothes", "Jewelry", "Electornic"];  
+    const textChanger = document.querySelector(".text");
     let index = 0;
     let charIndex = 0;
     let deleting = false;
@@ -255,13 +275,12 @@ const words = ["Men's Clothes", "Woman's Clothes", "Jewelry", "Electornic"]; // 
       }
       else if (deleting && charIndex === 0) {
         deleting = false;
-        index = (index + 1) % words.length;  
-        setTimeout(typeEffect, 100); 
+        index = (index + 1) % words.length; 
+        setTimeout(typeEffect, 100);  
       } else {
         setTimeout(typeEffect, speed);
       }
     }
 
-    // Start the effect
     typeEffect();  
  
