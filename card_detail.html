@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShopSmart </title>
+    <title>E-COMMERCE </title>
     <link rel="stylesheet" href="style.css">
     <style>
         .card3, .card4, .card5, .card7, .card6,.card10, .card11,.card12,.card13,.card14,.card15,.card16,.card17,.card18,.card19,.card20{
@@ -84,25 +84,25 @@
         </section>
     
         <section id="checkOut">
-          <div id="thanks">
-            <!-- <div><video src="timecomplete.mp4" autoplay></video></div> -->
-             <div id="image"><img src="complete task.gif" alt=""></div>
+            <div id="thanks">
+                <div id="image"><img src="complete task.gif" alt="Task Complete"></div>
             </div>
+        
             <div id="checkoutCard">
                 <h1>Enter Your Address And Select Payment Method</h1>
                 <div id="selectedItem"></div>
-                <form action="">
-                    <input type="text" name="" id="address" placeholder="Enter Your Address" required maxlength="50"><br>
-                    <input type="number" name="" id="number" placeholder="Enter Your Phone Number" required maxlength="11"> <br>
-                    <select name="" id="select" required>
+                
+                <form action="" id="fillOut">
+                    <input type="text" name="address" id="address" placeholder="Enter Your Address" required maxlength="50"><br>
+                    <input type="number" name="number" id="number" placeholder="Enter Your Phone Number" required maxlength="11"><br>
+                    <select name="paymentMethod" id="select" required>
                         <option value="">Choose Your Payment Method</option>
-                        <option value="">Easy Paisa</option>
-                        <option value="">Jazz Cash</option>
-                        <option value="">Cash</option>
+                        <option value="easypaisa">Easy Paisa</option>
+                        <option value="jazzcash">Jazz Cash</option>
+                        <option value="cash">Cash</option>
                     </select><br>
-                    <button onclick="confrim()" >Confirm</button>
+                    <button type="button" onclick="confrim()">Confirm</button>
                 </form>
-               
             </div>
         </section>
     
