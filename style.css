@@ -410,6 +410,13 @@ padding: 10px;
      
 }
 
+
+button{
+    box-shadow: 1px 1px 10px black;
+}
+.quantityButton{
+    box-shadow: none;
+}
  
 /* Responsive Design */
 @media screen and (max-width: 1030px) {
